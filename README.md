@@ -70,7 +70,7 @@ pip install -r requirements.txt
 * Save models or predictions to file
 
 ---
-**
+
 ## 🧪 **Sample Usage**
 
 1. Run the app:
