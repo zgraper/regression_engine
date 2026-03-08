@@ -1,11 +1,12 @@
-from gui import RegressionApp
-import tkinter as tk
+import subprocess
+import sys
 
 
 def main():
-    root = tk.Tk()
-    app = RegressionApp(root)
-    root.mainloop()
+    subprocess.run(
+        [sys.executable, "-m", "streamlit", "run", "app.py"],
+        check=True,
+    )
 
 
 if __name__ == "__main__":
