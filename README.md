@@ -1,14 +1,14 @@
-# **Linear & Logistic Regression GUI Tool**
+# **Linear & Logistic Regression Tool**
 
-This is a Python application with a graphical user interface (GUI) built using `tkinter`. It allows users to run linear or logistic regression models on data from `.csv` or `.xlsx` files. Users can interactively define the roles of each column (categorical, numerical, or excluded), choose the target column, and select the type of regression model.
+This is a Python application with a web-based interface built using `Streamlit`. It allows users to run linear or logistic regression models on data from `.csv` or `.xlsx` files. Users can interactively define the roles of each column (categorical, numerical, or excluded), choose the target column, and select the type of regression model.
 
 ---
 
 ## 🚀 **Features**
 
-* 📂 Load .csv or .xlsx data files
+* 📂 Upload .csv or .xlsx data files
 
-* 👁️ Preview your dataset directly in the GUI
+* 👁️ Preview your dataset directly in the browser
 
 * 🔧 Define column types using dropdowns (categorical, numerical, exclude)
 
@@ -24,7 +24,9 @@ This is a Python application with a graphical user interface (GUI) built using `
 
    * Label encoding for categorical target in logistic regression
 
-* 📈 Displays model intercept and coefficients in the output window
+* 📈 Displays model intercept, coefficients, and performance metrics
+
+* 📉 Plots Actual vs. Predicted values
 
 ---
 
@@ -44,15 +46,17 @@ pip install -r requirements.txt
 
 * `openpyxl` (for Excel file support)
 
-* `matplotlib` (optional for future visualization features)
+* `matplotlib` (for visualization)
+
+* `streamlit` (for the web interface)
 
 ---
 
 ## 📂 **File Structure**
 
 ```
-├── main.py                 # Entry point for the GUI
-├── gui.py                  # Contains all tkinter GUI code
+├── main.py                 # Entry point — launches the Streamlit app
+├── app.py                  # Streamlit web interface
 ├── regression_engine.py   # Performs linear and logistic regression
 ├── utils.py                # Handles file loading and helper functions
 ├── requirements.txt        # Dependencies list
@@ -61,36 +65,37 @@ pip install -r requirements.txt
 
 ---
 
-## 📌 **Future Features**
+## 📌 **Usage**
 
-* Add performance metrics like R² and accuracy
+Run the app using either:
 
-* Show predicted vs. actual plots with `matplotlib`
-
-* Save models or predictions to file
-
----
-
-## 🧪 **Sample Usage**
-
-1. Run the app:
-
-```
+```bash
 python main.py
 ```
 
-2. Select a data file
+or directly with Streamlit:
 
-3. Preview the data
+```bash
+streamlit run app.py
+```
 
-4. Assign column types and target
+Then open your browser to the displayed local URL (typically http://localhost:8501).
 
-5. Choose regression type
+---
 
-6. Click "**Run Regression**"
+## 🧪 **Sample Workflow**
+
+1. Run the app
+2. Upload a `.csv` or `.xlsx` data file
+3. Preview the loaded data
+4. Assign roles (categorical / numerical / exclude) to each column
+5. Select your target column
+6. Choose a regression type (Linear or Logistic)
+7. Click **Run Regression** to see results and a plot
 
 ---
 
 ## 👤 **Author**
 
 Created by Zane Graper — feel free to fork or contribute!
+
